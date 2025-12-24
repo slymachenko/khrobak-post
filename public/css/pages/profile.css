@@ -1,0 +1,68 @@
+/* MAIN */
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main .container {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #3d4e5d;
+  border-radius: 15px;
+  background-color: #83c0ed;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.profile > label {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding: 50px 0;
+}
+
+.profile > div {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile input,
+.profile button {
+  margin: 10px 0;
+  border: 0;
+  font-size: 15px;
+  appearance: none;
+  transition: all 0.3s;
+  width: 100%;
+  max-width: 400px;
+  outline: 0;
+  border-radius: 12px;
+  padding: 20px 20px;
+  box-shadow: 0px 5px 10px #000;
+}
+
+.profile button {
+  cursor: pointer;
+  background-color: #3d4e5d;
+  color: #fff;
+}
+
+.profile button:hover {
+  color: #99a2aa;
+}

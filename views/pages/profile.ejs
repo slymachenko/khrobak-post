@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head", { cssLink: "profile", pageTitle: "Profile" }) %>
+  <body>
+    <%- include("../includes/header", { isAuth, active: { profile: "active" } }) %>
+    <main>
+      <div class="container">
+          <form class="profile" action="/users/me?_method=PATCH" method="POST">
+            <label>My profile</label>
+            <div>
+              <input type="text" placeholder="First name" value="<%= user.first_name %>" name="first_name" required>
+              <input type="text" placeholder="Last name" value="<%= user.last_name %>" name="last_name">
+              <input type="text" placeholder="Phone number" value="<%= user.phone %>" name="phone" required>
+              <input type="text" placeholder="Address" value="<%= user.address %>" name="address">
+              <input type="email" placeholder="Email" value="<%= user.email %>" name="email">
+              <button id="submit" type="submit">Save</button>
+            </div>
+          </from>
+      </div>
+    </main>
+    <%- include("../includes/footer") %>
+    <script src="js/personal_info.js"></script>
+  </body>
+</html>

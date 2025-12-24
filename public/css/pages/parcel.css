@@ -1,0 +1,85 @@
+/* MAIN */
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main .container {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dispatch_reg {
+  border: 1px solid #3d4e5d;
+  border-radius: 15px 15px 0 0;
+
+  width: 100%;
+  padding: 20px;
+  background-color: #3d4e5d;
+  display: flex;
+  flex-direction: column;
+}
+
+.dispatch_reg .info_block > legend {
+  padding: 10px 0;
+  font-size: 25px;
+  color: #fff;
+}
+
+.dispatch_reg .info_block div legend {
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.dispatch_reg .info_block {
+  flex-direction: column;
+}
+
+.dispatch_reg .info_block > div {
+  border-top: 1px solid #fff;
+  padding: 20px 0;
+}
+
+.dispatch_reg label {
+  color: #fff;
+}
+
+.dispatch_reg select {
+  cursor: pointer;
+}
+
+.dispatch_reg input[type='text'],
+.dispatch_reg select {
+  color: #3d4e5d;
+  font-size: 15px;
+  transition: all 0.3s;
+  width: 100%;
+  padding: 20px 20px;
+  border: 1px solid #3d4e5d;
+}
+
+main button {
+  border: none;
+  border-top: 3px solid #83c0ed;
+  border-radius: 0 0 15px 15px;
+
+  font-size: 15px;
+  transition: all 0.3s;
+  width: 100%;
+  padding: 20px 20px;
+  cursor: pointer;
+  background-color: #3d4e5d;
+  color: #fff;
+}
+
+main button:hover {
+  color: #99a2aa;
+}
+
+@media (min-width: 740px) {
+  .dispatch_reg .info_block > legend {
+    font-size: 30px;
+  }
+}

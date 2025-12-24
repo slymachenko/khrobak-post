@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head", { cssLink: "home", pageTitle: "Home" }) %>
+  <body>
+    <%- include("../includes/header", { isAuth }) %>
+    <main id="main">
+      <div class="track">
+        <div class="container">
+          <div class="track_left">
+            <h1>Worldwide delivery</h1>
+            <p>From anywhere in Ukraine - anywhere abroad</p>
+          </div>
+          <div class="track_right">
+            <img src="imgs/plane.png" />
+          </div>
+        </div>
+      </div>
+      <div class="export">
+        <div class="container block_two">
+          <div class="block_left">
+            <img src="imgs/export.jpg"/>
+          </div>
+          <div class="block_right">
+            <h1>Start a successful international business!</h1>
+            <p>Sell goods abroad via the Internet — we are trusted by 25 thousand entrepreneurs</p>
+          </div>
+        </div>
+      </div>
+      <div class="services">
+        <div class="container">
+          <h1>Online services</h1>
+          <div>
+            <h2>Mobile app</h2>
+            <div class="services_link_block">
+              <div class="services_link">
+                <a href="https://play.google.com/"
+                  ><img class="icon" src="imgs/google-play.png" />
+                  <div>
+                    <p>Downaload from</p>
+                    <p>Google Play</p>
+                  </div></a
+                >
+              </div>
+              <div class="services_link">
+                <a href="https://www.apple.com/app-store/"
+                  ><img class="icon" src="imgs/apple.png" />
+                  <div>
+                    <p>Downaload from</p>
+                    <p>Apple Store</p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2>Social networks</h2>
+            <div class="services_link_block">
+              <div class="services_link">
+                <a href="https://instagram.com/"
+                  ><img class="icon" src="imgs/instagram.png" />
+                  <p>Instagram</p></a
+                >
+              </div>
+              <div class="services_link">
+                <a href="https://twitter.com/"
+                  ><img class="icon" src="imgs/twit.png" />
+                  <p>Twitter</p></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("../includes/footer") %>
+    <script src="js/home.js"></script>
+  </body>
+</html>

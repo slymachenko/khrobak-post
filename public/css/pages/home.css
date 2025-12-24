@@ -1,0 +1,168 @@
+/* MAIN */
+main {
+  height: 100%;
+  width: 100%;
+}
+
+/* MAIN > TRACK */
+.track {
+  padding-bottom: 30px;
+  background-color: #83c0ed;
+}
+
+.track .container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #1d2023;
+}
+
+.track_left {
+  justify-content: center;
+  align-items: center;
+}
+
+.track_left h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.track_left p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.track_right img {
+  max-width: 100%;
+}
+
+.track_input {
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+}
+
+.track_input form {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.track_input input,
+.track_input button {
+  border: 0;
+  font-size: 15px;
+  appearance: none;
+  transition: all 0.3s;
+}
+
+.track_input input {
+  outline: 0;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 20px;
+  box-shadow: 0px 5px 10px #000;
+}
+
+.track_input button {
+  cursor: pointer;
+  background-color: #1d2023;
+  color: #fff;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.track_input button:hover {
+  color: #99a2aa;
+}
+
+@media (min-width: 740px) {
+  .track {
+    /* background-image: url("../../imgs/clouds.jpg"); */
+    background-position: center center;
+    transition: ease-out 0.5s;
+  }
+  .track .container {
+    flex-direction: row;
+  }
+  .track_left {
+    align-items: flex-start;
+    padding-bottom: 100px;
+  }
+  .track_left h1,
+  .track_left p {
+    text-align: left;
+  }
+}
+
+/* MAIN > EXPORT */
+.export {
+  background-color: #fff;
+  padding: 20px 0;
+  color: #1d2023;
+}
+
+.block_two {
+  display: flex;
+  flex-direction: row;
+}
+
+.block_left {
+  max-width: 50%;
+}
+
+.block_left img {
+  max-width: 90%;
+}
+
+.block_right {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  justify-content: center;
+}
+
+/* MAIN > SERVICES */
+.services {
+  background-color: #83c0ed;
+  padding: 20px 0;
+  color: #1d2023;
+}
+
+.services .container h1,
+.services .container > div {
+  padding: 20px 0;
+}
+
+.services_link_block {
+  display: flex;
+  gap: 20px;
+}
+
+.services_link {
+  background-color: #1d2023;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.services_link:hover > a {
+  color: #99a2aa;
+}
+
+.services_link > a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  max-width: 2rem;
+  margin-right: 10px;
+}

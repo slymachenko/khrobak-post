@@ -1,0 +1,81 @@
+<%
+  locals.parcels = locals.parcels ? locals.parcels : [];
+
+  let selectedParcel = locals.parcels[0] || "";
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head", { cssLink: "parcels", pageTitle: "Parcels" }) %>
+  <body>
+    <%- include("../includes/header", { isAuth, active: { parcels: "active" } }) %>
+    <main>
+      <div class="container">
+        <div class="parcels">
+          <div class="head_block">
+            <select id="parcel_select">
+              <% 
+              for(let i = 0; i < locals.parcels.length; i++) {
+                let parcel_id = locals.parcels[i].id
+              %>
+              <option> <%= parcel_id %> </option>
+              <% } %> 
+            </select>
+          </div>
+          <div class="parcel_block">
+            <div>
+              <div>
+                <label>Shipment number</label>
+                <input type="text" value="<%= selectedParcel.id %>" name="shipment_id" required disabled />
+              </div>
+              <div>
+                <label>Parcel Width</label>
+                <input type="text" name="parcel_width" required disabled />
+              </div>
+              <div>
+                <label>Parcel Height</label>
+                <input type="text" name="parcel_height" required disabled />
+              </div>
+              <div>
+                <label>Parcel Length</label>
+                <input type="text" name="parcel_length" required disabled />
+              </div>
+              <div>
+                <label>Parcel Weight</label>
+                <input type="text" name="parcel_weight" required disabled />
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Status</label>
+                <input type="text" name="parcel_status" required disabled />
+              </div>
+              <div>
+                <label>Sender Phone</label>
+                <input type="text" name="sender_phone" required disabled />
+              </div>
+              <div>
+                <label>Seneder Address </label>
+                <input type="text" name="sender_address" required disabled />
+              </div>
+              <div>
+                <label>Reciever Phone</label>
+                <input type="text" name="reciever_phone" required disabled />
+              </div>
+              <div>
+                <label>Reciever Address</label>
+                <input type="text" name="reciever_address" required disabled />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("../includes/footer") %>
+
+    <script>
+      var parcels = JSON.parse('<%- JSON.stringify(locals.parcels) %>');
+    </script>
+    <script src="/js/parcels.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head", { cssLink: "prices", pageTitle: "Prices" }) %>
+  <body>
+    <%- include("../includes/header", { isAuth, active: { prices: "active" } }) %>
+    <main>
+      <div class="container">
+        <table>
+          <tr>
+            <th rowspan="2">
+              Weight
+            </th>
+            <th rowspan="2">
+             Longest side
+            </th>
+            <th class="toptd" colspan="3">
+              Shipment cost (VAT inclusive)
+            </th>
+          </tr>
+          <tr>
+            <th>
+              In the region
+              <p>(3-4 days)</p>
+            </th>
+            <th>
+              In the country
+              <p>(4-6 days)</p>
+            </th>
+            <th>
+              Abroad
+              <p>(7+ days)</p>
+            </th>
+          </tr>
+          <tr>
+            <td>0.25 kg</td>
+            <td>70 cm</td>
+            <td>25 UAH</td>
+            <td>30 UAH</td>
+            <td>35 UAH</td>
+          </tr>
+          <tr>
+            <td>0.5 kg</td>
+            <td>75 cm</td>
+            <td>28 UAH</td>
+            <td>35 UAH</td>
+            <td>45 UAH</td>
+          </tr>
+          <tr>
+            <td>1 kg</td>
+            <td>80 cm</td>
+            <td>30 UAH</td>
+            <td>40 UAH</td>
+            <td>55 UAH</td>
+          </tr>
+          <tr>
+            <td>2 kg</td>
+            <td>95 cm</td>
+            <td>32 UAH</td>
+            <td>45 UAH</td>
+            <td>65 UAH</td>
+          </tr>
+          <tr>
+            <td>5 kg</td>
+            <td>100 cm</td>
+            <td>35 UAH</td>
+            <td>50 UAH</td>
+            <td>75 UAH</td>
+          </tr>
+          <tr>
+            <td>10 kg</td>
+            <td>120 cm</td>
+            <td>40 UAH</td>
+            <td>55 UAH</td>
+            <td>85 UAH</td>
+          </tr>
+          <tr>
+            <td>20 kg</td>
+            <td>150 cm</td>
+            <td>42 UAH</td>
+            <td>60 UAH</td>
+            <td>95 UAH</td>
+          </tr>
+          <tr>
+            <td>30 kg</td>
+            <td>170 cm</td>
+            <td>50 UAH</td>
+            <td>70 UAH</td>
+            <td>110 UAH</td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <%- include("../includes/footer") %>
+  </body>
+</html>

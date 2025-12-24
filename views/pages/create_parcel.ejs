@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head", { cssLink: "parcels" , pageTitle: "Create parcel" }) %>
+  <body>
+    <%- include("../includes/header", { isAuth, active: { create_parcel: "active" } }) %>
+    <main>
+      <div class="container">
+        <form class="parcels" action="/parcels" method="POST">
+          <div class="parcel_block">
+            <div>
+              <div>
+                <label>Parcel Width (cm)</label>
+                <input type="number" placeholder="Parcel Width" name="width" required />
+              </div>
+              <div>
+                <label>Parcel Height (cm)</label>
+                <input type="number" placeholder="Parcel Height" name="height" required />
+              </div>
+              <div>
+                <label>Parcel Length (cm)</label>
+                <input type="number" placeholder="Parcel Length" name="length" required />
+              </div>
+              <div>
+                <label>Parcel Weight (kg)</label>
+                <input type="number" placeholder="Parcel Weight" name="weight" required />
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Sender Phone</label>
+                <input type="text" placeholder="Sender Phone" value="<%= userdata.phone %>" name="sender_phone" required />
+              </div>
+              <div>
+                <label>Sender Address</label>
+                <input type="text" placeholder="Sender Address" value="<%= userdata.address %>" name="sender_address" required />
+              </div>
+              <div>
+                <label>Reciever Phone</label>
+                <input type="text" placeholder="Reciever Phone" name="reciever_phone" required />
+              </div>
+              <div>
+                <label>Reciever Address</label>
+                <input type="text" placeholder="Reciever Address" name="reciever_address" required />
+              </div>
+            </div>
+            <div>
+              <div>
+                <label>Card Number</label>
+                <input type="text" placeholder="Card Number" name="card_number" required />
+              </div>
+              <div>
+                <label>Expiration</label>
+                <input type="text" placeholder="Expiration" name="expiration" required />
+              </div>
+              <div>
+                <label>CVV</label>
+                <input type="text" placeholder="CVV" name="cvv" required />
+              </div>
+              <div>
+                <label>Postal Code</label>
+                <input type="text" placeholder="Postal Code" name="postal_code" required />
+              </div>
+            </div>
+          </div>
+          <div>
+            <button type="submit">Create</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include("../includes/footer") %>
+  </body>
+</html>

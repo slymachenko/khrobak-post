@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../includes/head", { cssLink: "auth", pageTitle: "Sign up" }) %>
+  <body>
+    <%- include("../includes/header", { isAuth, active: { login: "active" } }) %>
+    <main>
+      <div class="container">
+        <form class="auth_form" action="auth/signup" method="POST">
+          <label>Create an account</label>
+          <div>
+            <input name="first_name" id="first_name" placeholder="First name*" required />
+            <input name="last_name" id="last_name" placeholder="Last name" />
+            <input name="phone" id="phone" placeholder="Phone number*" required />
+            <input name="address" id="address" placeholder="Address" />
+            <input name="email" id="email_input" placeholder="Enter email" />
+            <input name="password" id="pass_input" type="password" placeholder="Enter password*" required />
+            <button id="submit" type="submit">Continue</button>
+          </div>
+        </form>
+        <a href="/login">Already have an account?</a>
+      </div>
+    </main>
+    <%- include("../includes/footer") %>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<header>
+  <div class="container">
+    <div>
+      <a href="/" id="logo"><img src="/imgs/logo.png" /></a>
+      <div class="contact_info">
+        <p>
+          <span id="contact_info_num">+38 099 500 5454</span>
+          <br />
+          <span id="contact_info_email">poshta@khrobak.ua</span>
+        </p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li class="<%= locals.active?.prices %>"><a href="/prices">Prices</a></li>
+        <% if (!locals.isAuth) { %>
+          <li class="right <%= locals.active?.login %>"><a href="/login">Log in</a></li>
+        <% } else { %>
+          <li class="right <%= locals.active?.create_parcel %>"><a href="/parcels/create">Create parcel</a></li>
+          <li class="<%= locals.active?.parcels %>"><a href="/parcels">Parcels</a></li>
+          <li class="<%= locals.active?.profile %>"><a href="/profile">My profile</a></li>
+          <li><form action="/auth/logout" method="POST"><button><p>Logout</p></button></form></li>
+        <% } %>
+      </ul>
+    </nav>
+  </div>
+</header>
